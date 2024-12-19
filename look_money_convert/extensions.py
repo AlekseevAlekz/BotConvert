@@ -34,7 +34,7 @@ class CurrencyConverter:
             response = requests.get(url)
             response.raise_for_status()
             data = json.loads(response.content)
-            rate = data['rates'][quote]
+            rate = data['conversion_rates'][quote]
             price = rate * amount
         except requests.exceptions.RequestException:
             raise APIException('Ошибка подключения к API обмена валют.')
