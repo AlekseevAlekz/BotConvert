@@ -1,6 +1,6 @@
 import telebot
 from config import TOKEN
-from extensions_gpt import APIException, CurrencyConverter
+from extensions import APIException, CurrencyConverter
 
 bot = telebot.TeleBot(TOKEN)
 
